@@ -1,0 +1,7 @@
+api/.vs/
+api/OhmCalculator.API/bin/
+api/OhmCalculator.API/obj/
+api/OhmCalculator.API.Tests/bin/
+api/OhmCalculator.API.Tests/obj/
+build/
+node_modules/
