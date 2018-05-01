@@ -76,4 +76,77 @@ http://ohmcalculatorapi.azurewebsites.net/swagger/
 
 ## XUnit API Unit Tests
 
+The ASP.Net Core API uses XUnit to perform unit tests against the value calculations. To run the tests, open the project in Visual Studio Code and navigate to the path mentioned below using the integrated terminal.
+
 <pre><code>C:\Documents\GitHub\React\ohm-calculator-master\api\OhmCalculator.API.Tests> dotnet test</code></pre>
+
+This will run unit tests against various color code combinations for 4-band and 5-band resistors and validate the calculations are correct. An example of the 4-band unit test is below.
+
+<pre><code>
+[Theory]
+[Trait("Name", "4 Band Resistor Test")]
+[InlineData("black",  "black", "brown")]
+[InlineData("brown",  "black", "brown")]
+[InlineData("red",    "black", "brown")]
+[InlineData("orange", "black", "brown")]
+[InlineData("yellow", "black", "brown")]
+[InlineData("green",  "black", "brown")]
+[InlineData("blue",   "black", "brown")]
+[InlineData("purple", "black", "brown")]
+[InlineData("gray",   "black", "brown")]
+[InlineData("white",  "gold",  "blue")]
+public void Test4Band(string bands, string multiplier, string tolerance)
+{
+  OhmCalculator.API.Controllers.CalculatorController controller = null;
+  string result = "", expected = "", conditions = "";
+
+  // Format our conditions string based on the input.
+  conditions = string.Format("{0},{1},{2}", bands, multiplier, tolerance);
+
+  // Setup our controller.
+  controller = new Controllers.CalculatorController();
+
+  // Perform the calculation.
+  result = controller.Get4band(bands, bands, multiplier, tolerance);
+
+  // Determine what the expected answer should be based on the conditions.
+  switch (conditions)
+  {
+    case "black,black,brown":
+      expected = "0Ω ±1%";
+      break;
+    case "brown,black,brown":
+      expected = "11Ω ±1%";
+      break;
+    case "red,black,brown":
+      expected = "22Ω ±1%";
+      break;
+    case "orange,black,brown":
+      expected = "33Ω ±1%";
+      break;
+    case "yellow,black,brown":
+      expected = "44Ω ±1%";
+      break;
+    case "green,black,brown":
+      expected = "55Ω ±1%";
+      break;
+    case "blue,black,brown":
+      expected = "66Ω ±1%";
+      break;
+    case "purple,black,brown":
+      expected = "77Ω ±1%";
+      break;
+    case "gray,black,brown":
+      expected = "88Ω ±1%";
+      break;
+    case "white,gold,blue":
+      expected = "9.9Ω ±0.25%";
+      break;
+    default:
+      throw new NotSupportedException("The condition '" + conditions + "' is not supported by the unit test.");
+  }
+
+  Assert.Equal(expected, result);
+}
+</code></pre>
+
