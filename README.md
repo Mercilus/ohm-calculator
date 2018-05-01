@@ -102,6 +102,8 @@ public class Calculator : IOhmValueCalculator
 
 ## Reactjs Front-end
 
+#### Setup
+
 Launch Visual Studio Code and open the folder at the following location:
 
 <pre><code>C:\Users\Eric\Documents\GitHub\React\ohm-calculator-master</code></pre>
