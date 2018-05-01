@@ -68,11 +68,11 @@ http://ohmcalculatorapi.azurewebsites.net/swagger/
 
 [Example Report](http://ohmcalculator.azurewebsites.net/reports/report.html)
 
-<pre><code>>C:\Documents\GitHub\React\ohm-calculator-master> webdriver-manager update</code></pre>
+<pre><code>C:\Documents\GitHub\React\ohm-calculator-master> webdriver-manager update</code></pre>
 
-<pre><code>>C:\Documents\GitHub\React\ohm-calculator-master> webdriver-manager start</code></pre>
+<pre><code>C:\Documents\GitHub\React\ohm-calculator-master> webdriver-manager start</code></pre>
 
-<pre><code>>C:\Documents\GitHub\React\ohm-calculator-master> npm run e2e</code></pre>
+<pre><code>C:\Documents\GitHub\React\ohm-calculator-master> npm run e2e</code></pre>
 
 ## XUnit API Unit Tests
 
