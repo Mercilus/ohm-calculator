@@ -1,7 +1,11 @@
 api/.vs/
 api/OhmCalculator.API/bin/
-api/OhmCalculator.API/obj/
+api/OhmCalculator.API/obj/Any CPU
+api/OhmCalculator.API/obj/Debug
+api/OhmCalculator.API/obj/Release
 api/OhmCalculator.API.Tests/bin/
-api/OhmCalculator.API.Tests/obj/
+api/OhmCalculator.API.Tests/obj/Any CPU
+api/OhmCalculator.API.Tests/obj/Debug
+api/OhmCalculator.API.Tests/obj/Release
 build/
 node_modules/
