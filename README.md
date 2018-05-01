@@ -66,7 +66,7 @@ http://ohmcalculatorapi.azurewebsites.net/swagger/
 
 ## Protractor E2E Automated Testing
 
-The React web application uses [Protractor](https://www.protractortest.org/#/) to perform automated end-to-end regression testing. Protractor interacts with the application the same way a user would be launching it in the browser and navigating through the user interface. I am also using [protractor-beautiful-report](https://www.npmjs.com/package/protractor-beautiful-reporter) to provide a detail report of the test results. The reports capture the success/failure status, errors and warnings in the browser and even take a snap shot of the user interface when each test case is executed. An example of the report can be found at the link below.
+The React web application uses [Protractor](https://www.protractortest.org/#/) to perform automated end-to-end regression testing. Protractor interacts with the application the same way a user would by launching it in the browser and navigating through the user interface. I am also using [protractor-beautiful-report](https://www.npmjs.com/package/protractor-beautiful-reporter) to provide a detail report of the test results. The reports capture the success/failure status, errors and warnings in the browser and even take a snap shot of the user interface when each test case is executed. An example of the report can be found at the link below.
 
 [Ohm Calculator e2e Regression Test Report](http://ohmcalculator.azurewebsites.net/reports/report.html)
 
