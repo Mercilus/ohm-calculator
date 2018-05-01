@@ -22,7 +22,7 @@ class ColorCode extends Component {
             // Render the codes.
             this.props.code === "yellow" || this.props.code === "green" || this.props.code === "white" || this.props.code === "gold" || this.props.code === "silver" ? (
                 
-                <div className="row" style={{ 'backgroundColor': this.props.code, 'color' : 'black'}} onClick={ this.onClick } >
+                <div id={this.formatId()} className="row" style={{ 'backgroundColor': this.props.code, 'color' : 'black'}} onClick={ this.onClick } >
                 
                     <div style={{ 'backgroundColor': this.state.active ? 'pink' : this.props.code, 'display':'flex', 'flex' : '1 0', 'width': '100%', 'alignItems': 'center', 'justifyContent': 'center', 'cursor' : 'pointer', 
                     'background': this.state.active ? 'url(' + bg + ')' : 'none', 'backgroundRepeat': 'repeat' }} >
@@ -32,7 +32,7 @@ class ColorCode extends Component {
                 </div>
             ) : (
 
-                <div className="row" style={{ 'backgroundColor': this.props.code, 'color' :  'white'}} onClick={ this.onClick } >
+                <div id={this.formatId()} className="row" style={{ 'backgroundColor': this.props.code, 'color' :  'white'}} onClick={ this.onClick } >
                     
                     <div style={{ 'backgroundColor': this.state.active ? 'pink' : this.props.code, 'display':'flex', 'flex' : '1 0', 'width': '100%', 'alignItems': 'center', 'justifyContent': 'center', 'cursor' : this.props.code !== '#ccc' ? 'pointer' : 'not-allowed', 
                     'background': this.state.active ? 'url(' + bg + ')' : 'none', 'backgroundRepeat': 'repeat'}} >
@@ -53,7 +53,15 @@ class ColorCode extends Component {
         }
 
         return null;
-      }
+    }
+
+    /**
+     * Formats the attribute id for the codes element so it can be found by e2e test automation.
+     */
+    formatId(){
+
+        return this.props.group.replace(' ','').replace('.','') + ':' + this.props.code
+    }
 
     /**
      * Updates the parent component when a code is selected.

@@ -24,23 +24,25 @@ class Panel extends Component {
     return (
       <div className="panel">
 
-        <label><b>Resistor Color Code Calculator</b></label>
+        <label id="plabel"><b>Resistor Color Code Calculator</b></label>
 
-        <button className="btnPrimary" onClick={this.onClick}>{ 'Switch to ' + (this.state.mode === '4-band' ? '5 Band' : '4 Band') }</button>
+        <button id={'btnMode'} className="btnPrimary" onClick={this.onClick}>{ 'Switch to ' + (this.state.mode === '4-band' ? '5 Band' : '4 Band') }</button>
         
         <Resistor mode={this.state.mode} band1={this.state.band1} band2={this.state.band2} band3={this.state.band3} multiplier={this.state.multiplier} tolerance={this.state.tolerance}/>
         
         <ColorCodeTable mode={this.state.mode} selectionsChanged={ this.onSelectionsChanged } />
 
-        <h1>{ this.state.result }</h1>
+        <h1 id={'result'}>{ this.state.result }</h1>
         
       </div>
     );
   }
 
+  /**
+   * Handles the click event when changing calculator modes.
+   */
   onClick(){
 
-    console.log("hello");
     this.setState({mode : this.state.mode === "4-band" ? "5-band" : "4-band"});
   }
 

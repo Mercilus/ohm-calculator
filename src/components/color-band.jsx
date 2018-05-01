@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ColorCode from './color-code';
 
-
 class ColorBand extends Component {
     
     constructor(props){
@@ -28,20 +27,20 @@ class ColorBand extends Component {
                     // Render elements for all significant number bands.
                     this.props.bandType === "Significant" ? (
 
-                        this.state.itemsSource.map((el, i) => <ColorCode key={i} code={ el.bgColor } header={el.value} active={el.active} codeChanged={this.onCodeChanged} />)
+                        this.state.itemsSource.map((el, i) => <ColorCode key={i} group={this.props.bandHeader} code={ el.bgColor } header={el.value} active={el.active} codeChanged={this.onCodeChanged} />)
 
                     ) : (
                     
                     // Render elements for the multiplier band.
                     this.props.bandType === "Multiplier" ? (
 
-                        this.state.itemsSource.map((el, i) => <ColorCode key={i} code={el.bgColor} header={el.value} active={el.active} codeChanged={this.onCodeChanged} />)
+                        this.state.itemsSource.map((el, i) => <ColorCode key={i} group={this.props.bandHeader} code={el.bgColor} header={el.value} active={el.active} codeChanged={this.onCodeChanged} />)
                     ) : (
 
                     // Render elements for the tolerance band.
                     this.props.bandType === "Tolerance" ? (
                         
-                        this.state.itemsSource.map((el, i) => <ColorCode key={i} code={el.bgColor} header={el.value} active={el.active} codeChanged={this.onCodeChanged} />)
+                        this.state.itemsSource.map((el, i) => <ColorCode key={i} group={this.props.bandHeader} code={el.bgColor} header={el.value} active={el.active} codeChanged={this.onCodeChanged} />)
                     ) : (
 
                     // Dont render anything.

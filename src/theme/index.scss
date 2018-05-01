@@ -31,12 +31,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  //flex: 1;
-  // align-content: flex-end;
-  //justify-content: center;
-
   position: relative;
-  //margin-top:20px;
   border-style: solid;
   border-width: 1px;
   border-color: #fff;
@@ -48,18 +43,13 @@
   border-bottom-left-radius: 8px;
   width: 100%;
   height:100%;
-  // width: 425px;
   min-height: 625px;
-
 }
 
 .resistor {
-
   flex-direction: column;
   display:flex;
-  //align-items: center; 
   position: relative;
-  //border-style :solid;
   border-width :1px;
   border-color : #ccc;
   width: 400px;
@@ -68,29 +58,24 @@
 }
 
 .resistor-img {
-
   position: relative;
   width: 400px;
   height: 64px;
 }
 
 .band-one {
-
   width:20px; 
   height:55px; 
   position:absolute;
-  //background-color: red;
   left: 137px;
   top: 5px;
   display: flex;
 }
 
 .band-two {
-
   width:15px; 
   height:55px; 
   position:absolute;
-  //background-color: purple;
   left: 170px;
   top: 5px;
 }
@@ -100,40 +85,30 @@
   width:15px; 
   height:55px; 
   position:absolute;
-  //background-color: purple;
   left: 197px;
   top: 5px;
 }
 
 .band-multiplier {
-
   width:15px; 
   height:55px; 
   position:absolute;
-  // background-color: yellow;
-  // background-color: brown;
   left: 197px;
   top:5px;
 }
 
 .band-tolerance {
-
   width:15px; 
   height:55px; 
   position:absolute;
   position:absolute;
-  //background-color: blue;  
   left: 243px;
   top:5px;
 }
 
 .color-code-table {
-
   display:flex;
   flex-direction: row;
-  //flex: 1 0 400px; 
-  // justify-content: space-evenly;
-  // justify-content: space-between;
   max-height: 400px;
   height: 100%;
   max-width: 350px;
@@ -141,13 +116,11 @@
 }
 
 .column:first-child {
-
   margin:2.5px;
   margin-left:0px;
 }
 
 .column:last-child {
-
   margin:2.5px;
   margin-right:0px;
 }
@@ -158,20 +131,17 @@
 }
 
 .column{
-
   display:flex;
   flex-direction: column;
   flex: 1;
 }
 
 .row{
-
   display:flex;
   flex-direction: column;
   flex: 1 0; 
   justify-content: center;
   align-items: center;
-
   border-style:solid; 
   border-width:1px; 
   border-color:#ccc;
@@ -181,28 +151,17 @@
 }
 
 .homer{
-
   position: absolute;
   bottom:0px;
   left:0px;
 }
 
 .btnPrimary{
-
   min-width: 75px;
   height: 35px;
   background-color: #007ACC;
   color: #fff;
   border: none;
   margin-top: 10px;
-}
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 

@@ -7,13 +7,18 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "jasmine": "^3.1.0",
     "node-sass-chokidar": "^1.2.2",
     "npm-run-all": "^4.1.2",
+    "protractor": "^5.3.1",
+    "protractor-beautiful-reporter": "^0.5.8",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4"
   },
   "scripts": {
+    "e2e": "protractor ./e2e/protractor.conf.js",
+    "e2e-server": "webdriver-manager start",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
