@@ -42,6 +42,64 @@ The api endpoint is configured by default to run against the following url:
 
 You should not need to change the endpoint to run the api. If you want to change endpoint, open the properties > debug settings for the OhmCalculator.API project in the solution. Update the App URL setting to your desired endpoint.
 
+#### IOhmValueCalculator Interface
+
+IOhmValueCalculator was implemented by the Calculator class to provide the interface for calculating the Ohm value rating of resistors. The class and interface can be found in the following location:
+
+<pre><code>
+C:\Documents\GitHub\React\ohm-calculator-master (3)\ohm-calculator-master\api\OhmCalculator.API\Models
+</code></pre>
+
+````C#
+public interface IOhmValueCalculator
+{
+   /// <summary>
+   /// Calculates the Ohm value of a resistor based on the band colors.
+   /// </summary>
+   /// <param name="bandAColor">The color of the first figure of component value band.</param>
+   /// <param name="bandBColor">The color of the second significant figure band.</param>
+   /// <param name="bandCColor">The color of the decimal multiplier band.</param>
+   /// <param name="bandDColor">The color of the tolerance value band.</param>
+   int CalculateOhmValue(string bandAColor, string bandBColor, string bandCColor, string bandDColor);
+}
+
+public class Calculator : IOhmValueCalculator
+{
+  public decimal CalculateOhmValue(string bandAColor, string bandBColor, string bandCColor, string bandDColor)
+  {
+    string band1, band2, band3 = "";
+    decimal multiplier;
+
+    // Convert the band colors into numeric strings.
+    band1 = ConvertBand(bandAColor);
+    band2 = ConvertBand(bandBColor);
+
+    band1 = band1 != "0" ? string.Format("{0}{1}", band1, band2) : band2;
+
+    // Determine the multiplier based on the specified color.
+    multiplier = ConvertMultiplier(bandDColor);
+
+    // Determine if we are calculating 5 band.
+    if (!String.IsNullOrEmpty(bandCColor))
+    {
+      band3 = ConvertBand(bandCColor);
+
+      band1 = band1 != "0" ? string.Format("{0}{1}", band1, band3) : band3;
+    }
+
+    return Int32.Parse(band1) * multiplier;
+  }
+
+  public decimal ConvertMultiplier(string color){...}
+
+  public string ConvertBand(string color){...}
+
+  public static string ConvertTolerence(string color){...}
+
+  public static string FormatNumber(decimal n){...}
+}
+````
+
 ## Reactjs Front-end
 
 Launch Visual Studio Code and open the folder at the following location:
