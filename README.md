@@ -66,13 +66,26 @@ http://ohmcalculatorapi.azurewebsites.net/swagger/
 
 ## Protractor E2E Automated Testing
 
-[Example Report](http://ohmcalculator.azurewebsites.net/reports/report.html)
+The React web application uses [Protractor](https://www.protractortest.org/#/) to perform automated end-to-end regression testing. Protractor interacts with the application the same way a user would be launching it in the browser and navigating through the user interface. I am also using [protractor-beautiful-report](https://www.npmjs.com/package/protractor-beautiful-reporter) to provide a detail report of the test results. The reports capture the success/failure status, errors and warnings in the browser and even take a snap shot of the user interface when each test case is executed. An example of the report can be found at the link below.
 
+[Ohm Calculator e2e Regression Test Report](http://ohmcalculator.azurewebsites.net/reports/report.html)
+
+To run protractor locally, you will need to run the following commands in the Visual Studio Code integrated terminal.
+
+Protractor uses a Selenium Server to run the automation. You will need to run this command to ensure your drivers are up to date.
 <pre><code>C:\Documents\GitHub\React\ohm-calculator-master> webdriver-manager update</code></pre>
 
+Running this command will launch Selenium Server in the background.
 <pre><code>C:\Documents\GitHub\React\ohm-calculator-master> webdriver-manager start</code></pre>
 
+Finally, running this command will launch protractor and run the test suite.
 <pre><code>C:\Documents\GitHub\React\ohm-calculator-master> npm run e2e</code></pre>
+
+*Note: If you have issues running protractor, you can try installing it globally with the following command:
+
+<pre><code>npm install -g protractor</code></pre>
+
+Selenium Server also has dependencies with Java and requires version 8+ to be installed and accessible from your OS environment variables.
 
 ## XUnit API Unit Tests
 
