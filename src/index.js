@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './theme/index.css';
-//import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import Master from './components/master';
+//import Master from './components/master';
+import Panel from './components/panel';
 
 
-ReactDOM.render(<Master />, document.getElementById('root'));
+ReactDOM.render(<Panel />, document.getElementById('root'));
 registerServiceWorker();
