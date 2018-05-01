@@ -16,7 +16,7 @@ const WEB_SERVER = 'AZURE';
  * Note: If you want to run locally against an endpoint you define, update <LOCAL_API_ENDPOINT> with
  *       your the desired endpoint and set WEB_SERVER to 'LOCAL'.
  */
-const AZURE_API_ENDPOINT = 'http://ohmcalculatorapi.azurewebsites.net/api/';
+const AZURE_API_ENDPOINT = 'https://ohmcalculatorapi.azurewebsites.net/api';
 const LOCAL_API_ENDPOINT = 'http://localhost:15794/api/';
 
 export const configuration = {
