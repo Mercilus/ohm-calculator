@@ -5,8 +5,8 @@
 ![interface](http://ohmcalculator.azurewebsites.net/images/ohm-calculator-interface-4band.png) ![interface](http://ohmcalculator.azurewebsites.net/images/ohm-calculator-interface-5.png)
 
 <ul>
-  <li>Reactjs Front-end</li>
   <li>ASP.Net Core Web API</li>
+  <li>Reactjs Front-end</li>  
   <li>Swagger API Documentation</li>
   <li>XUnit API Unit Tests</li>
   <li>Protractor E2E Automated Testing</li>
@@ -34,7 +34,7 @@ The api endpoint is configured by default to run against the following url:
 
 You should not need to change the endpoint to run the api. If you want to change endpoint, open the properties > debug settings for the OhmCalculator.API project in the solution. Update the App URL setting to your desired endpoint.
 
-## React Web Application
+## Reactjs Front-end
 
 Launch Visual Studio Code and open the folder at the following location:
 
