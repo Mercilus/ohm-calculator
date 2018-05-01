@@ -9,6 +9,7 @@ exports.config = {
     onPrepare: () => {
       browser.ignoreSynchronization = true
       browser.driver.manage().window().maximize();
+      //browser.driver.manage().window().setSize(650, 850)
 
       jasmine.getEnv().addReporter(new HtmlReporter({
           baseDirectory: 'e2e/reports',
@@ -20,8 +21,13 @@ exports.config = {
           docTitle: 'E2E Testing Automation Report'
       }).getJasmine2Reporter());
     },
-    mochaOpts: {
-      enableTimeouts: false,
-    },
+    multiCapabilities: [
+       {
+           'browserName': 'chrome'
+       },
+      //  {
+      //      'browserName': 'firefox'
+      //  }
+    ],
     allScriptsTimeout: 15000,
   }

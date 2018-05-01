@@ -8,7 +8,7 @@
  * Note: This setting only takes effect when running locally. When deployed to the server, the
  *       Azure endpoint will always be used.
  */
-const WEB_SERVER = 'LOCAL';
+const WEB_SERVER = 'AZURE';
 
 /**
  * API endpoints used by the application.

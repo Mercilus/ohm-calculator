@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import './theme/index.css';
 import registerServiceWorker from './registerServiceWorker';
 //import Master from './components/master';
-import Panel from './components/panel';
+import Master from './components/master';
 
 
-ReactDOM.render(<Panel />, document.getElementById('root'));
+ReactDOM.render(<Master />, document.getElementById('root'));
 registerServiceWorker();
