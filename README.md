@@ -54,8 +54,8 @@ By default, the web application uses the Azure api endpoint to perform the color
 
 <pre><code>C:\Users\Eric\Documents\GitHub\React\ohm-calculator-master\src\web.config.js</code></pre>
 
-<pre><code>
- /**
+ ```javascript
+  /**
   * Specifies the web server that is hosting the application. Possible values are the following:
   * 
   * LOCAL - Routes all calls through the IIS endpoint.
@@ -73,13 +73,14 @@ By default, the web application uses the Azure api endpoint to perform the color
   *       your the desired endpoint and set WEB_SERVER to 'LOCAL'.
   */
   const AZURE_API_ENDPOINT = 'https://ohmcalculatorapi.azurewebsites.net/api';
-  const LOCAL_API_ENDPOINT = 'http://localhost:15794/api/';
+  const LOCAL_API_ENDPOINT = <green>'http://localhost:15794/api/';</green>
 
   export const configuration = {
 
       api_endpoint: window.location.hostname !== 'localhost' ? AZURE_API_ENDPOINT : WEB_SERVER === 'AZURE' ? AZURE_API_ENDPOINT :   LOCAL_API_ENDPOINT
   }
-</code></pre>
+```
+
 
 You will then need to open the api project in Visual Studio 2017 and press F5 which will launch the api and make it available for consumption.
 
