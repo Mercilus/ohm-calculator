@@ -31,7 +31,7 @@ namespace OhmCalculator.API
 			// Register the Swagger generator, defining one or more Swagger documents
 			services.AddSwaggerGen(c =>
 			{
-				c.SwaggerDoc("v1", new Info { Title = "Ohmers Calculator API", Version = "1.0.0" });
+				c.SwaggerDoc("v1", new Info { Title = "Ohm Calculator API", Version = "1.0.0" });
 			});
 		}
 
@@ -55,7 +55,7 @@ namespace OhmCalculator.API
 			// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
 			app.UseSwaggerUI(c =>
 			{
-				c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ohmers Calculator API");
+				c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ohm Calculator API");
 			});
 
 			app.UseMvc();
