@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Resistor from './resistor';
 import ColorCodeTable from './color-code-table';
-
+import { configuration } from '../web.config'
 
 class Panel extends Component {
 
@@ -44,6 +44,8 @@ class Panel extends Component {
   onClick(){
 
     this.setState({mode : this.state.mode === "4-band" ? "5-band" : "4-band"});
+
+    console.log(configuration.api_endpoint);
   }
 
   /**
@@ -95,9 +97,8 @@ class Panel extends Component {
       params += 'Get5band/' + this.state.band1 + '/' + this.state.band2 + '/' + this.state.band3 + '/' + this.state.multiplier + '/' + this.state.tolerance;
     }
 
-    // Get the result for the color code combination. http://ohmcalculatorapi.azurewebsites.net/api/Calculator
-    // axios.get(`http://localhost:15794/api/Calculator` + params).then(res => {
-    axios.get(`http://ohmcalculatorapi.azurewebsites.net/api/Calculator` + params).then(res => {
+    // Get the result for the color code combination.
+    axios.get(configuration.api_endpoint + '/calculator' + params).then(res => {
       
         this.setState({ result : res.data });
     });
