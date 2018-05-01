@@ -7,9 +7,9 @@
 <ul>
   <li>ASP.Net Core Web API</li>
   <li>Reactjs Front-end</li>  
-  <li>Swagger API Documentation</li>
-  <li>XUnit API Unit Tests</li>
+  <li>Swagger API Documentation</li>  
   <li>Protractor E2E Automated Testing</li>
+  <li>XUnit API Unit Tests</li>
 </ul>
 
 ## Installation
