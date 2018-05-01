@@ -64,16 +64,16 @@ The ASP.Net Core API uses [Swagger](https://en.wikipedia.org/wiki/Swagger_(softw
 
 http://ohmcalculatorapi.azurewebsites.net/swagger/
 
-<h2>Protractor E2E Automated Testing</h2>
+## Protractor E2E Automated Testing
 
 [Example Report](http://ohmcalculator.azurewebsites.net/reports/report.html)
 
-<pre><code>C:\ohm-calculator> webdriver-manager update</code></pre>
+<pre><code>>C:\Documents\GitHub\React\ohm-calculator-master> webdriver-manager update</code></pre>
 
-<pre><code>C:\ohm-calculator> webdriver-manager start</code></pre>
+<pre><code>>C:\Documents\GitHub\React\ohm-calculator-master> webdriver-manager start</code></pre>
 
-<pre><code>C:\ohm-calculator> npm run e2e</code></pre>
+<pre><code>>C:\Documents\GitHub\React\ohm-calculator-master> npm run e2e</code></pre>
 
-<h2>XUnit API Unit Tests</h2>
+## XUnit API Unit Tests
 
-<pre><code>C:\ohm-calculator> dotnet test</code></pre>
+<pre><code>C:\Documents\GitHub\React\ohm-calculator-master\api\OhmCalculator.API.Tests> dotnet test</code></pre>
