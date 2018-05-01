@@ -97,7 +97,6 @@ class Master extends Component {
 
     // Get the result for the color code combination.
     axios.get(configuration.api_endpoint + '/calculator' + params).then(res => {
-    // axios.get('https://ohmcalculatorapi.azurewebsites.net/api/calculator' + params).then(res => {
       
         this.setState({ result : res.data });
     });
