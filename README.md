@@ -93,7 +93,29 @@ The ASP.Net Core API uses XUnit to perform unit tests against the value calculat
 
 <pre><code>C:\Documents\GitHub\React\ohm-calculator-master\api\OhmCalculator.API.Tests> dotnet test</code></pre>
 
-This will run unit tests against various color code combinations for 4-band and 5-band resistors and validate the calculations are correct. An example of the 4-band unit test is below.
+This will run unit tests against various color code combinations for 4-band and 5-band resistors and validate the calculations are correct. The status of the number of test cases that passed, failed and that were skipped are then displayed in the console.
+
+<pre><code>
+C:\Documents\GitHub\React\ohm-calculator-master\api\OhmCalculator.API.Tests>dotnet test
+Build started, please wait...
+Build completed.
+
+Test run for C:\\Documents\GitHub\React\ohm-calculator-master\api\OhmCalculator.API.Tests\bin\Debug\netcoreapp2.0\OhmCalculator.API.Tests.dll(.NETCoreApp,Version=v2.0)
+Microsoft (R) Test Execution Command Line Tool Version 15.5.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:01.5033941]   Discovering: OhmCalculator.API.Tests
+[xUnit.net 00:00:01.7037693]   Discovered:  OhmCalculator.API.Tests
+[xUnit.net 00:00:01.7136180]   Starting:    OhmCalculator.API.Tests
+[xUnit.net 00:00:02.0271274]   Finished:    OhmCalculator.API.Tests
+
+Total tests: 20. Passed: 20. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 2.9836 Seconds
+</code></pre>
+
+An example of the 4-band unit test is below.
 
 <pre><code>
 [Theory]
