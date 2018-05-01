@@ -4,6 +4,7 @@
 
 ![interface](http://ohmcalculator.azurewebsites.net/images/ohm-calculator-interface-4band.png) ![interface](http://ohmcalculator.azurewebsites.net/images/ohm-calculator-interface-5.png)
 
+Technology Stack
 <ul>
   <li>ASP.Net Core Web API</li>
   <li>Reactjs Front-end</li>  
@@ -11,6 +12,10 @@
   <li>Protractor E2E Automated Testing</li>
   <li>XUnit API Unit Tests</li>
 </ul>
+
+## Usage
+
+
 
 ## Installation
 
@@ -117,7 +122,7 @@ Selenium Server also has dependencies with Java and requires version 8+ to be in
 
 ## XUnit API Unit Tests
 
-The ASP.Net Core API uses XUnit to perform unit tests against the value calculations. To run the tests, open the project in Visual Studio Code and navigate to the path mentioned below using the integrated terminal.
+The ASP.Net Core API uses XUnit to perform unit tests against the value calculations. To run the tests, open the project in Visual Studio Code and navigate to the path mentioned below and enter the following command using the integrated terminal.
 
 <pre><code>C:\Documents\GitHub\React\ohm-calculator-master\api\OhmCalculator.API.Tests> dotnet test</code></pre>
 
@@ -145,7 +150,7 @@ Test execution time: 2.9836 Seconds
 
 An example of the 4-band unit test is below.
 
-<pre><code>
+````C#
 [Theory]
 [Trait("Name", "4 Band Resistor Test")]
 [InlineData("black",  "black", "brown")]
@@ -211,5 +216,5 @@ public void Test4Band(string bands, string multiplier, string tolerance)
 
   Assert.Equal(expected, result);
 }
-</code></pre>
+````
 
