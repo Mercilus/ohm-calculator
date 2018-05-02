@@ -16,7 +16,7 @@ Technology Stack
 
 ## Usage
 
-A resistor is a passive two-terminal electrical component that is used to reduce current flow, adjust signal levels, divide voltages, among other uses. Color coded bands are used to indicate the resistors Ohm value, rating and tolerance. The ohm-calcuator allows the color band to be selected for the significant digits along with the multiplier and tolerance of a resistor. It then calculates and displays the resitors rating.
+A resistor is a passive two-terminal electrical component that is used to reduce current flow, adjust signal levels and divide voltages, among other uses. Color coded bands are used to indicate the resistors Ohm value, rating and tolerance. The ohm-calcuator allows the color band to be selected for the significant digits along with the multiplier and tolerance of a resistor. It then calculates and displays the resitors rating.
 
 ![interface](http://ohmcalculator.azurewebsites.net/images/ohm-calculator-interface.png)
 
