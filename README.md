@@ -20,7 +20,7 @@ A resistor is a passive two-terminal electrical component that is used to reduce
 
 ![interface](http://ohmcalculator.azurewebsites.net/images/ohm-calculator-interface.png)
 
-An online demo of the calculator, hosted on Azure can be found [here](http://ohmcalculator.azurewebsites.net/index.html)
+An online demo of the calculator, hosted on Azure can be found [here](http://ohmcalculator.azurewebsites.net/index.html).
 
 ## Installation
 
